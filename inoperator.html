@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>in operator</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        firstName: "dany",
+        lastName: "arkham",
+      };
+
+      if ("firstName" in person) {
+        alert("ada nama depan");
+      } else {
+        alert("hello");
+      }
+      // tag in memeriksa keberadaan properties dalam object dan index dalam array apakah tersedia
+
+      const names = [null, "kurniawan", null];
+      const result = 0 in names;
+      document.writeln(`<p>index apakah tersedia? ${result} </p>`);
+    </script>
+  </body>
+</html>

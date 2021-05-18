@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>swicthcase</title>
+  </head>
+  <body>
+    <script>
+      const nilai = prompt(
+        "input nilai dengan huruf besar A,B atau C"
+      ).toUpperCase();
+      switch (nilai) {
+        case "A":
+          document.writeln("<p>anda lulus dengan baik</p>");
+          break;
+        case "B":
+          document.writeln("<p>anda lulus</p>");
+          break;
+
+        default:
+          document.writeln("<p>anda tidak lulus</p>");
+          break;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const person = {};
+
+      // ubah properti
+      person["nama"] = "dany arkham";
+      person["alamat"] = "trias";
+      person["umur"] = 24;
+      person[2] = true;
+
+      delete person["umur"];
+      console.table(person);
+
+      const orang = {
+        nama: "dany arkham",
+        alamat: "trias",
+        umur: 24,
+      };
+      console.table(orang);
+
+      console.info(person["nama"]);
+    </script>
+  </body>
+</html>
