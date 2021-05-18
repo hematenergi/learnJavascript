@@ -8,14 +8,17 @@
   </head>
   <body>
     <script>
-      function register(name, gender = "UNKNOWN") {
-        console.info(name);
-        console.info(gender);
+      function sayhello(nama) {
+        document.writeln(`<p>${nama}</p>`);
       }
-      register();
-      register("eko", "Male");
-      register("eko");
-      register("dany", null);
+      const say = sayhello;
+      sayhello("dany");
+      say("cikukik");
+      // function sebagai parameter
+      function giveMeName(callback) {
+        callback("dany ulala");
+      }
+      giveMeName(say);
     </script>
   </body>
 </html>

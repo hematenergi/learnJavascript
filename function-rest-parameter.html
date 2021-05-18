@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //rest parameter hanya bisa ditaruh di parameter terakhir
+      function sum(name, ...data) {
+        let total = 0;
+        for (const item of data) {
+          total += item;
+        }
+        console.info(`total ${name} is ${total}`);
+      }
+      sum("orange", 20, 30, 40, 50);
+      sum("banana", 50, 50, 50, 50, 100);
+      // namun tidak bisa menggunakan array
+      const values = [10, 10, 10, 10, 10, 10];
+      sum("test", values);
+      // spread syntax array jadi bisa
+      sum("values", ...values);
+      // argument object (tidak disarankan)
+      function oldSum() {
+        let total = 0;
+        for (const argument of arguments) {
+          total += argument;
+        }
+        document.writeln(`<p>total is ${total}</p>`);
+      }
+      oldSum(1, 2, 3, 4, 5);
+    </script>
+  </body>
+</html>
